@@ -1,0 +1,21 @@
+{
+    "name": "MEDBEDbSkvozniak/yii2-package-theme-absolute-admin",
+    "keywords": ["yii2", "extension"],
+    "homepage": "https://github.com/MEDBEDbSkvozniak/fav-yii2-packages",
+    "type": "yii2-extension",
+    "license": "BSD 3-Clause",
+    "authors": [
+        {
+            "name": "Fedorov A.V.",
+            "email": "MEDBEDbSkvozniak@gmail.com",
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "fav\\packages\\": ""
+        }
+    }
+}
