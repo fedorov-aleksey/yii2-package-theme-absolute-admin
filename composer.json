@@ -10,9 +10,6 @@
             "email": "MEDBEDbSkvozniak@gmail.com",
         }
     ],
-    "minimum-stability": "dev",
-    "require": {
-    },
     "autoload": {
         "psr-4": {
             "fav\\packages\\AbsoluteAdmin\\": ""
