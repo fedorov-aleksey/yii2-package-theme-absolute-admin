@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fav\\packages\\": ""
+            "fav\\packages\\AbsoluteAdmin\\": ""
         }
     }
 }
