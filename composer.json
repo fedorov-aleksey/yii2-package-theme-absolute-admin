@@ -1,17 +1,9 @@
 {
-    "name": "MEDBEDbSkvozniak/yii2-package-theme-absolute-admin",
-    "keywords": ["yii2", "extension"],
+    "name": "fedorov-aleksey/yii2-package-theme-absolute-admin",
     "version": "1.0.0",
-    "homepage": "https://github.com/MEDBEDbSkvozniak/yii2-package-theme-absolute-admin",
-    "type": "yii2-extension",
-    "authors": [
-        {
-            "name": "Fedorov A.V.",
-            "email": "MEDBEDbSkvozniak@gmail.com",
-        }
-    ],
+    "homepage": "https://github.com/fedorov-aleksey/yii2-package-theme-absolute-admin",
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "fav\\packages\\AbsoluteAdmin\\": ""
         }
     }
