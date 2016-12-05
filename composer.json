@@ -1,10 +1,10 @@
 {
     "name": "fedorov-aleksey/yii2-package-theme-absolute-admin",
-    "version": "1.0.0",
+    "version": "v1.0.0",
     "homepage": "https://github.com/fedorov-aleksey/yii2-package-theme-absolute-admin",
     "autoload": {
-        "psr-0": {
-            "fav\\packages\\AbsoluteAdmin\\": ""
+        "psr-4": {
+            "fav\\AbsoluteAdmin\\": ""
         }
     }
 }
