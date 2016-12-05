@@ -6,23 +6,23 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class TagmanagerAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
-        'vendor/plugins/tagmanager/tagmanager.css',
+        'plugins/tagmanager/tagmanager.css',
     ];
     public $js = [
-        'vendor/plugins/tagmanager/tagmanager.js',
+        'plugins/tagmanager/tagmanager.js',
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }

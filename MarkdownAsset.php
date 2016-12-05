@@ -6,25 +6,25 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class MarkdownAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
 
     ];
     public $js = [
-        'vendor/plugins/markdown/bootstrap-markdown.js',
-        'vendor/plugins/markdown/markdown.js',
-        'vendor/plugins/markdown/to-markdown.js',
+        'plugins/markdown/bootstrap-markdown.js',
+        'plugins/markdown/markdown.js',
+        'plugins/markdown/to-markdown.js',
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }

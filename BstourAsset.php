@@ -6,23 +6,23 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class BstourAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
-        'vendor/plugins/bstour/bootstrap-tour.css',
+        'plugins/bstour/bootstrap-tour.css',
     ];
     public $js = [
-        'vendor/plugins/bstour/bootstrap-tour.js',
+        'plugins/bstour/bootstrap-tour.js',
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }

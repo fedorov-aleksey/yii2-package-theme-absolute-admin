@@ -6,23 +6,23 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class TagsinputAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
 
     ];
     public $js = [
-        'vendor/plugins/tagsinput/tagsinput.min.js',
+        'plugins/tagsinput/tagsinput.min.js',
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }

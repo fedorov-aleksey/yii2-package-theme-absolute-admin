@@ -6,24 +6,24 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class CalendarAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
-        'vendor/plugins/fullcalendar/fullcalendar.min.css',
+        'plugins/fullcalendar/fullcalendar.min.css',
     ];
     public $js = [
-        'vendor/plugins/fullcalendar/fullcalendar.min.js',
-        'vendor/plugins/fullcalendar/lib/moment.min.js',
+        'plugins/fullcalendar/fullcalendar.min.js',
+        'plugins/fullcalendar/lib/moment.min.js',
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }

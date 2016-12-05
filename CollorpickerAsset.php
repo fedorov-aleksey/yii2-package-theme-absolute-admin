@@ -6,23 +6,23 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class CollorpickerAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
-        'vendor/plugins/colorpicker/css/bootstrap-colorpicker.min.css',
+        'plugins/colorpicker/css/bootstrap-colorpicker.min.css',
     ];
     public $js = [
-        'vendor/plugins/colorpicker/js/bootstrap-colorpicker.min.js',
+        'plugins/colorpicker/js/bootstrap-colorpicker.min.js',
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }

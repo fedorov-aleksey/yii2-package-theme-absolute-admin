@@ -6,23 +6,23 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class HighlightAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
-        'vendor/plugins/highlight/styles/googlecode.css',
-        'vendor/plugins/highlight/styles/github.css',
+        'plugins/highlight/styles/googlecode.css',
+        'plugins/highlight/styles/github.css',
     ];
     public $js = [
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }

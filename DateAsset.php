@@ -6,25 +6,25 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class DateAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
-        'vendor/plugins/daterange/daterangepicker.css',
-        'vendor/plugins/datepicker/css/bootstrap-datetimepicker.css',
+        'plugins/daterange/daterangepicker.css',
+        'plugins/datepicker/css/bootstrap-datetimepicker.css',
     ];
     public $js = [
-        'vendor/plugins/datepicker/js/bootstrap-datetimepicker.min.js',
-        'vendor/plugins/daterange/daterangepicker.min.js',
+        'plugins/datepicker/js/bootstrap-datetimepicker.min.js',
+        'plugins/daterange/daterangepicker.min.js',
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }

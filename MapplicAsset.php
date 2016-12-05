@@ -6,24 +6,24 @@
  * Time: 10:07
  */
 
-namespace backend\assets;
+namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
 class MapplicAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/absoluteAdmin/theme/';
+    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
     public $basePath = '@webroot';
 
     public $css = [
-        'vendor/plugins/mapplic/mapplic/mapplic.css',
+        'plugins/mapplic/mapplic/mapplic.css',
     ];
     public $js = [
-        'vendor/plugins/mapplic/js/hammer.js',
-        'vendor/plugins/mapplic/mapplic/mapplic.js',
+        'plugins/mapplic/js/hammer.js',
+        'plugins/mapplic/mapplic/mapplic.js',
     ];
 
     public $depends = [
-        'backend\assets\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
 }
