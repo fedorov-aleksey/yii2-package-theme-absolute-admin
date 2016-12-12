@@ -12,8 +12,8 @@ use yii\web\AssetBundle;
 
 class CollorpickerAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
-    public $basePath = '@webroot';
+
+
 
     public $css = [
         'plugins/colorpicker/css/bootstrap-colorpicker.min.css',

@@ -12,8 +12,8 @@ use yii\web\AssetBundle;
 
 class AdmintoolsAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
-    public $basePath = '@webroot';
+
+
 
     public $css = [
         'assets/admin-tools/admin-forms/css/admin-forms.css',

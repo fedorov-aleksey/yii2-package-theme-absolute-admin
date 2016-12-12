@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
 class BstimeoutAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/fav/yii2-package-theme-absolute-admin/';
-    public $basePath = '@webroot';
+
 
     public $css = [
 

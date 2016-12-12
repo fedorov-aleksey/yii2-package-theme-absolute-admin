@@ -12,8 +12,8 @@ use yii\web\AssetBundle;
 
 class CalendarAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
-    public $basePath = '@webroot';
+
+
 
     public $css = [
         'plugins/fullcalendar/fullcalendar.min.css',

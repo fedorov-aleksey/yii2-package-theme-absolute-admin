@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  */
 class AbsoluteAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/fedorov-aleksey/yii2-package-theme-absolute-admin/';
+
     public $basePath = '@webroot';
 
     public $css = [
@@ -28,13 +28,13 @@ class AbsoluteAsset extends AssetBundle
     ];
     public $js = [
         'assets/js/main.js',
-        'plugins/moment/moment.min.js',
         'assets/js/utility/utility.js',
         'assets/js/demo/demo.js',
+        'assets/js/demo/widgets.js',
+        'plugins/moment/moment.min.js',
         'plugins/validate/jquery.validate.js',
         'plugins/jquerymask/jquery.maskedinput.min.js',
         'plugins/magnific/jquery.magnific-popup.js',
-        'assets/js/demo/widgets.js',
 //        'plugins/map/gmaps.min.js',
     ];
     public $depends = [
@@ -45,4 +45,13 @@ class AbsoluteAsset extends AssetBundle
         'yii\bootstrap\BootstrapPluginAsset',
         'yii\jui\JuiAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source';
+        parent::init();
+    }
 }
