@@ -1,6 +1,6 @@
 {
     "name": "fedorov-aleksey/yii2-package-theme-absolute-admin",
-    "version": "v1.0.2",
+    "version": "v1.0.3",
     "homepage": "https://github.com/fedorov-aleksey/yii2-package-theme-absolute-admin",
     "autoload": {
         "psr-4": {
