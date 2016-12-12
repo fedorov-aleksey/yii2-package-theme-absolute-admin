@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class DateAsset extends AssetBundle
+class DateAsset extends AbsoluteAsset
 {
 
 

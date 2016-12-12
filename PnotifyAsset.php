@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class PnotifyAsset extends AssetBundle
+class PnotifyAsset extends AbsoluteAsset
 {
 
 

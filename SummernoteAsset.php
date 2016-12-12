@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class SummernoteAsset extends AssetBundle
+class SummernoteAsset extends AbsoluteAsset
 {
 
 

@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class JvectormapAsset extends AssetBundle
+class JvectormapAsset extends AbsoluteAsset
 {
 
 

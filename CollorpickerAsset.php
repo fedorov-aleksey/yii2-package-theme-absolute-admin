@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CollorpickerAsset extends AssetBundle
+class CollorpickerAsset extends AbsoluteAsset
 {
 
 

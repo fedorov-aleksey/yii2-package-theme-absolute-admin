@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class DropzoneAsset extends AssetBundle
+class DropzoneAsset extends AbsoluteAsset
 {
 
 

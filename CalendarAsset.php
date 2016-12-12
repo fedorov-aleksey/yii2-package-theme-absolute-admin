@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CalendarAsset extends AssetBundle
+class CalendarAsset extends AbsoluteAsset
 {
 
 

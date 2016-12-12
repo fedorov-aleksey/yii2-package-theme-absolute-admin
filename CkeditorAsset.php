@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CkeditorAsset extends AssetBundle
+class CkeditorAsset extends AbsoluteAsset
 {
 
 

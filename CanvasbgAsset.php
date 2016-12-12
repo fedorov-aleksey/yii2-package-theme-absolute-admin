@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CanvasbgAsset extends AssetBundle
+class CanvasbgAsset extends AbsoluteAsset
 {
 
 

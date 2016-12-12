@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class SlickAsset extends AssetBundle
+class SlickAsset extends AbsoluteAsset
 {
 
 

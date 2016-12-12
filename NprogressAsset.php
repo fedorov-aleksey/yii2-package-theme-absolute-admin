@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class NprogressAsset extends AssetBundle
+class NprogressAsset extends AbsoluteAsset
 {
 
 

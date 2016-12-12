@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class TabdropAsset extends AssetBundle
+class TabdropAsset extends AbsoluteAsset
 {
 
 

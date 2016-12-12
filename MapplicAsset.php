@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class MapplicAsset extends AssetBundle
+class MapplicAsset extends AbsoluteAsset
 {
 
 

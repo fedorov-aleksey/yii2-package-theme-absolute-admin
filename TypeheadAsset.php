@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class TypeheadAsset extends AssetBundle
+class TypeheadAsset extends AbsoluteAsset
 {
 
 

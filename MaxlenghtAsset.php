@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class MaxlenghtAsset extends AssetBundle
+class MaxlenghtAsset extends AbsoluteAsset
 {
 
 

@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class BstimeoutAsset extends AssetBundle
+class BstimeoutAsset extends AbsoluteAsset
 {
     public $sourcePath = '@vendor/fav/yii2-package-theme-absolute-admin/';
 

@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CropperAsset extends AssetBundle
+class CropperAsset extends AbsoluteAsset
 {
 
 

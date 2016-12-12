@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class TagsinputAsset extends AssetBundle
+class TagsinputAsset extends AbsoluteAsset
 {
 
 

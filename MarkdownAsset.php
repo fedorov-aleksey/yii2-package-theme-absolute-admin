@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class MarkdownAsset extends AssetBundle
+class MarkdownAsset extends AbsoluteAsset
 {
 
 
