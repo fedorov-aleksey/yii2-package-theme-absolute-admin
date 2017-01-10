@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class PnotifyAsset extends AbsoluteAsset
+class PnotifyAsset extends AssetBundle
 {
 
 
@@ -18,10 +18,20 @@ class PnotifyAsset extends AbsoluteAsset
     public $css = [
     ];
     public $js = [
-        'plugins/pnotify/pnotify.js',
+        'pnotify.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/pnotify';
+        parent::init();
+    }
+}
 }

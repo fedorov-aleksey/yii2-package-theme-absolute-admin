@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class FileuploadAsset extends AbsoluteAsset
+class FileuploadAsset extends AssetBundle
 {
 
 

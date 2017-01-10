@@ -10,18 +10,23 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class HolderAsset extends AbsoluteAsset
+class HolderAsset extends AssetBundle
 {
 
-
-
-    public $css = [
-    ];
     public $js = [
-        'plugins/holder/holder.min.js',
+        'holder.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/holder';
+        parent::init();
+    }
 }

@@ -10,24 +10,25 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CharsAsset extends AbsoluteAsset
+class CharsAsset extends AssetBundle
 {
-
-
-
     public $css = [
-        'plugins/c3charts/c3.min.css',
+        'c3.min.css',
     ];
     public $js = [
-        'assets/js/demo/charts/d3.js',
-        'assets/js/demo/charts/flot.js',
-        'assets/js/demo/charts/highcharts.js',
-        'plugins/c3charts/c3.min.js',
-        'plugins/c3charts/d3.min.js',
-        'plugins/highcharts/highcharts.js',
+        'c3.min.js',
+        'd3.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/c3charts';
+        parent::init();
+    }
 }

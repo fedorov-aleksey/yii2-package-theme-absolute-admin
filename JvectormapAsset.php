@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class JvectormapAsset extends AbsoluteAsset
+class JvectormapAsset extends AssetBundle
 {
 
 
@@ -19,11 +19,20 @@ class JvectormapAsset extends AbsoluteAsset
 
     ];
     public $js = [
-        'plugins/jvectormap/jquery.jvectormap.min.js',
-        'plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js',
+        'jquery.jvectormap.min.js',
+        'assets/jquery-jvectormap-us-lcc-en.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/jvectormap';
+        parent::init();
+    }
 }

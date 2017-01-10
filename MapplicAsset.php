@@ -10,20 +10,28 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class MapplicAsset extends AbsoluteAsset
+class MapplicAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'plugins/mapplic/mapplic/mapplic.css',
+        'mapplic/mapplic.css',
     ];
     public $js = [
-        'plugins/mapplic/js/hammer.js',
-        'plugins/mapplic/mapplic/mapplic.js',
+        'js/hammer.js',
+        'mapplic/mapplic.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/mapplic';
+        parent::init();
+    }
 }

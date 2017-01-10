@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class MaxlenghtAsset extends AbsoluteAsset
+class MaxlenghtAsset extends AssetBundle
 {
 
 
@@ -19,10 +19,19 @@ class MaxlenghtAsset extends AbsoluteAsset
 
     ];
     public $js = [
-        'plugins/maxlength/bootstrap-maxlength.min.js',
+        'bootstrap-maxlength.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/maxlength';
+        parent::init();
+    }
 }

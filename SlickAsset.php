@@ -10,19 +10,28 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class SlickAsset extends AbsoluteAsset
+class SlickAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'plugins/slick/slick.css',
+        'slick.css',
     ];
     public $js = [
-        'plugins/slick/slick.js',
+        'slick.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/slick';
+        parent::init();
+    }
 }

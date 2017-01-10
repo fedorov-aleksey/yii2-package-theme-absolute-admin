@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class TabdropAsset extends AbsoluteAsset
+class TabdropAsset extends AssetBundle
 {
 
 
@@ -18,10 +18,18 @@ class TabdropAsset extends AbsoluteAsset
     public $css = [
     ];
     public $js = [
-        'plugins/tabdrop/bootstrap-tabdrop.js',
+        'bootstrap-tabdrop.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/tabdrop';
+        parent::init();
+    }
 }

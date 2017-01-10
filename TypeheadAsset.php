@@ -10,18 +10,25 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class TypeheadAsset extends AbsoluteAsset
+class TypeheadAsset extends AssetBundle
 {
-
-
 
     public $css = [
     ];
     public $js = [
-        'plugins/typeahead/typeahead.bundle.min.js',
+        'typeahead.bundle.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/typeahead';
+        parent::init();
+    }
 }

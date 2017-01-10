@@ -10,19 +10,28 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class TagmanagerAsset extends AbsoluteAsset
+class TagmanagerAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'plugins/tagmanager/tagmanager.css',
+        'tagmanager.css',
     ];
     public $js = [
-        'plugins/tagmanager/tagmanager.js',
+        'tagmanager.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/tagmanager';
+        parent::init();
+    }
 }

@@ -10,32 +10,34 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class TableAsset extends AbsoluteAsset
+class TableAsset extends AssetBundle
 {
 
 
-
     public $css = [
-        'plugins/datatables/media/css/dataTables.plugins.css',
-        'plugins/datatables/media/css/dataTables.bootstrap.css',
-        'plugins/datatables/extensions/Editor/css/dataTables.editor.css',
-        'plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css',
-        'plugins/nestable/nestable.css',
-        'plugins/xeditable/css/bootstrap-editable.css',
-        'plugins/xeditable/inputs/address/address.css',
-        'plugins/xeditable/inputs/typeaheadjs/lib/typeahead.js-bootstrap.css',
-        'plugins/footable/css/footable.core.min.css',
+        'media/css/dataTables.plugins.css',
+        'media/css/dataTables.bootstrap.css',
+        'extensions/Editor/css/dataTables.editor.css',
+        'extensions/ColReorder/css/dataTables.colReorder.min.css',
     ];
     public $js = [
-        'plugins/datatables/media/js/jquery.dataTables.js',
-        'plugins/datatables/media/js/dataTables.bootstrap.js',
-        'plugins/xeditable/js/bootstrap-editable.min.js',
-        'plugins/xeditable/inputs/address/address.js',
-        'plugins/xeditable/inputs/typeaheadjs/lib/typeahead.js',
-        'plugins/xeditable/inputs/typeaheadjs/typeaheadjs.js',
+        'media/js/jquery.dataTables.js',
+        'media/js/dataTables.bootstrap.js',
     ];
 
     public $depends = [
-        'fav\AbsoluteAdmin\AbsoluteAsset'
+        'fav\AbsoluteAdmin\AbsoluteAsset',
+        'fav\AbsoluteAdmin\XedittablePlugin',
+        'fav\AbsoluteAdmin\NestablePluginCss',
+        'fav\AbsoluteAdmin\FootablePluginCss',
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/datatables';
+        parent::init();
+    }
 }

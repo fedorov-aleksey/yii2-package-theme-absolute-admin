@@ -10,19 +10,24 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class TagsinputAsset extends AbsoluteAsset
+class TagsinputAsset extends AssetBundle
 {
-
-
-
     public $css = [
 
     ];
     public $js = [
-        'plugins/tagsinput/tagsinput.min.js',
+        'tagsinput.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/tagsinput';
+        parent::init();
+    }
 }

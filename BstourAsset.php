@@ -10,19 +10,28 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class BstourAsset extends AbsoluteAsset
+class BstourAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'plugins/bstour/bootstrap-tour.css',
+        'bootstrap-tour.css',
     ];
     public $js = [
-        'plugins/bstour/bootstrap-tour.js',
+        'bootstrap-tour.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/bstour';
+        parent::init();
+    }
 }

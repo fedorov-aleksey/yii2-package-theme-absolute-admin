@@ -10,19 +10,28 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class AdmintoolsAsset extends AbsoluteAsset
+class AdmintoolsAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'assets/admin-tools/admin-forms/css/admin-forms.css',
+        'admin-forms/css/admin-forms.css',
     ];
     public $js = [
-        'assets/admin-tools/admin-forms/js/additional-methods.min.js',
+        'admin-forms/js/additional-methods.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/assets/admin-tools';
+        parent::init();
+    }
 }

@@ -10,19 +10,22 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class BstimeoutAsset extends AbsoluteAsset
+class BstimeoutAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/fav/yii2-package-theme-absolute-admin/';
-
-
-    public $css = [
-
-    ];
     public $js = [
-        'plugins/bstimeout/bs-timeout.js',
+        'bs-timeout.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/bstimeout';
+        parent::init();
+    }
 }

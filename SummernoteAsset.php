@@ -10,19 +10,27 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class SummernoteAsset extends AbsoluteAsset
+class SummernoteAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'plugins/summernote/summernote.css',
+        'summernote.css',
     ];
     public $js = [
-        'plugins/summernote/summernote.min.js',
+        'summernote.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/summernote';
+        parent::init();
+    }
 }

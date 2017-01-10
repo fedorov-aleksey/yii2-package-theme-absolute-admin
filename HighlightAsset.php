@@ -10,19 +10,26 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class HighlightAsset extends AbsoluteAsset
+class HighlightAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'plugins/highlight/styles/googlecode.css',
-        'plugins/highlight/styles/github.css',
-    ];
-    public $js = [
+        'styles/googlecode.css',
+        'styles/github.css',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/highlight';
+        parent::init();
+    }
 }

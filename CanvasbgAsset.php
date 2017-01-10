@@ -10,18 +10,25 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CanvasbgAsset extends AbsoluteAsset
+class CanvasbgAsset extends AssetBundle
 {
 
 
 
-    public $css = [
-    ];
     public $js = [
-        'plugins/canvasbg/canvasbg.js',
+        'canvasbg.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/canvasbg';
+        parent::init();
+    }
 }

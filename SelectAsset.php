@@ -10,19 +10,28 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class SelectAsset extends AbsoluteAsset
+class SelectAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'plugins/select2/css/core.css',
+        'css/core.css',
     ];
     public $js = [
-        'plugins/select2/select2.min.js',
+        'select2.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/select2';
+        parent::init();
+    }
 }

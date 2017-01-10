@@ -10,20 +10,29 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CalendarAsset extends AbsoluteAsset
+class CalendarAsset extends AssetBundle
 {
 
 
 
     public $css = [
-        'plugins/fullcalendar/fullcalendar.min.css',
+        'fullcalendar.min.css',
     ];
     public $js = [
-        'plugins/fullcalendar/fullcalendar.min.js',
-        'plugins/fullcalendar/lib/moment.min.js',
+        'fullcalendar.min.js',
+        'lib/moment.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/fullcalendar';
+        parent::init();
+    }
 }

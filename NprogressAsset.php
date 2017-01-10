@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class NprogressAsset extends AbsoluteAsset
+class NprogressAsset extends AssetBundle
 {
 
 
@@ -18,10 +18,20 @@ class NprogressAsset extends AbsoluteAsset
     public $css = [
     ];
     public $js = [
-        'plugins/nprogress/nprogress.js',
+        'nprogress.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/nprogress';
+        parent::init();
+    }
 }

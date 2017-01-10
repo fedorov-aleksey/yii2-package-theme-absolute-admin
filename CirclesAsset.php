@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class CirclesAsset extends AbsoluteAsset
+class CirclesAsset extends AssetBundle
 {
 
 

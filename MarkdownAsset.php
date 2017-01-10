@@ -10,7 +10,7 @@ namespace fav\AbsoluteAdmin;
 
 use yii\web\AssetBundle;
 
-class MarkdownAsset extends AbsoluteAsset
+class MarkdownAsset extends AssetBundle
 {
 
 
@@ -19,12 +19,21 @@ class MarkdownAsset extends AbsoluteAsset
 
     ];
     public $js = [
-        'plugins/markdown/bootstrap-markdown.js',
-        'plugins/markdown/markdown.js',
-        'plugins/markdown/to-markdown.js',
+        'bootstrap-markdown.js',
+        'markdown.js',
+        'to-markdown.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/markdown';
+        parent::init();
+    }
 }
