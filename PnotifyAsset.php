@@ -34,4 +34,3 @@ class PnotifyAsset extends AssetBundle
         parent::init();
     }
 }
-}
