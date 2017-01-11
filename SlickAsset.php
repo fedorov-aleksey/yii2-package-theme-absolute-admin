@@ -33,5 +33,9 @@ class SlickAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/slick';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = [
+            'slick' . $type . '.css',
+        ];
     }
 }

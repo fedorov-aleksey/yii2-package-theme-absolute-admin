@@ -19,10 +19,19 @@ class FileuploadAsset extends AssetBundle
 
     ];
     public $js = [
-        'plugins/fileupload/fileupload.js',
+        'fileupload.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/fileupload';
+        parent::init();
+    }
 }

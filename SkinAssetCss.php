@@ -30,5 +30,16 @@ class SkinAssetCss extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/assets/skin';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = [
+            'default_skin/css/theme' . $type . '.css',
+            'fonts/zocial/zocial' . $type . '.css',
+            'fonts/glyphicons-pro/glyphicons-pro' . $type . '.css',
+            'fonts/icomoon/icomoon' . $type . '.css',
+            'fonts/iconsweets/iconsweets' . $type . '.css',
+            'fonts/octicons/octicons' . $type . '.css',
+            'fonts/google/font' . $type . '.css',
+            'fonts/stateface/stateface' . $type . '.css',
+        ];
     }
 }

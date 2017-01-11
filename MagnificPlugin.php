@@ -22,6 +22,8 @@ class MagnificPlugin extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/magnific';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = ['magnific-popup' . $type . '.css'];
     }
 
 }

@@ -16,7 +16,7 @@ class AdmintoolsAsset extends AssetBundle
 
 
     public $css = [
-        'admin-forms/css/admin-forms.css',
+        'admin-forms/css/admin-forms.min.css',
     ];
     public $js = [
         'admin-forms/js/additional-methods.min.js',

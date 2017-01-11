@@ -33,5 +33,7 @@ class MapplicAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/mapplic';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = ['mapplic/mapplic' . $type . '.css'];
     }
 }

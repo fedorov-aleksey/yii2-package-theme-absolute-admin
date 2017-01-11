@@ -31,5 +31,11 @@ class HighlightAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/highlight';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = [
+            'styles/googlecode' . $type . '.css',
+            'styles/github' . $type . '.css',
+        ];
     }
+
 }

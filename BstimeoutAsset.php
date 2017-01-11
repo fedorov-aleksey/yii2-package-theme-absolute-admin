@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
 class BstimeoutAsset extends AssetBundle
 {
     public $js = [
-        'bs-timeout.js',
+        'bs-timeout.min.js',
     ];
 
     public $depends = [
@@ -27,5 +27,7 @@ class BstimeoutAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/bstimeout';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->js = ['bs-timeout' . $type . '.js',];
     }
 }

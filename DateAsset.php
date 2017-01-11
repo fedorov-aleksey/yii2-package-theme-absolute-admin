@@ -16,15 +16,24 @@ class DateAsset extends AssetBundle
 
 
     public $css = [
-        'plugins/daterange/daterangepicker.css',
-        'plugins/datepicker/css/bootstrap-datetimepicker.css',
+        'css/bootstrap-datetimepicker.css',
     ];
     public $js = [
-        'plugins/datepicker/js/bootstrap-datetimepicker.min.js',
-        'plugins/daterange/daterangepicker.min.js',
+        'js/bootstrap-datetimepicker.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/datepicker';
+        parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = ['css/bootstrap-datetimepicker' . $type . '.css'];
+    }    
 }

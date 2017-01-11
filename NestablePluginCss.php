@@ -28,5 +28,7 @@ class NestablePluginCss extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/nestable';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = ['nestable' . $type . '.css'];
     }
 }

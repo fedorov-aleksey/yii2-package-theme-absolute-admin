@@ -32,5 +32,9 @@ class SummernoteAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/summernote';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = [
+            'summernote' . $type . '.css',
+        ];
     }
 }

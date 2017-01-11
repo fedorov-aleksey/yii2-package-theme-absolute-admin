@@ -34,5 +34,11 @@ class XedittablePlugin extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/xeditable';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = [
+            'css/bootstrap-editable' . $type . '.css',
+            'inputs/address/address' . $type . '.css',
+            'inputs/typeaheadjs/lib/typeahead.js-bootstrap' . $type . '.css',
+        ];
     }
 }

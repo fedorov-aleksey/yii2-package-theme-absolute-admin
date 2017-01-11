@@ -39,5 +39,12 @@ class TableAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/datatables';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = [
+            'media/css/dataTables.plugins' . $type . '.css',
+            'media/css/dataTables.bootstrap' . $type . '.css',
+            'extensions/Editor/css/dataTables.editor' . $type . '.css',
+            'extensions/ColReorder/css/dataTables.colReorder.min.css',
+        ];
     }
 }

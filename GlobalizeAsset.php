@@ -18,10 +18,19 @@ class GlobalizeAsset extends AssetBundle
     public $css = [
     ];
     public $js = [
-        'plugins/globalize/globalize.min.js',
+        'globalize.min.js',
     ];
 
     public $depends = [
         'fav\AbsoluteAdmin\AbsoluteAsset'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/source/plugins/globalize';
+        parent::init();
+    }
 }

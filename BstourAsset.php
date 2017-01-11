@@ -14,7 +14,6 @@ class BstourAsset extends AssetBundle
 {
 
 
-
     public $css = [
         'bootstrap-tour.css',
     ];
@@ -33,5 +32,7 @@ class BstourAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/bstour';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = ['bootstrap-tour' . $type . '.css'];
     }
 }

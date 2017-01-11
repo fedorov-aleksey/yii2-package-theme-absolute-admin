@@ -33,5 +33,7 @@ class SelectAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/select2';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = ['css/core' . $type . '.css'];
     }
 }

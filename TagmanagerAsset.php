@@ -33,5 +33,9 @@ class TagmanagerAsset extends AssetBundle
     {
         $this->sourcePath = __DIR__ . '/source/plugins/tagmanager';
         parent::init();
+        $type = YII_ENV_DEV ? '' : '.min';
+        $this->css = [
+            'tagmanager' . $type . '.css',
+        ];
     }
 }
